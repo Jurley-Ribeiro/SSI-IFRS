@@ -12,5 +12,8 @@ package br.edu.ifrs.poa.veiculo.veiculoSegurado;
 public class VeiculoSegurado {
     private double kilometragem;
     private String placa;
+    private Apolice apolice;
+
+
     
 }
