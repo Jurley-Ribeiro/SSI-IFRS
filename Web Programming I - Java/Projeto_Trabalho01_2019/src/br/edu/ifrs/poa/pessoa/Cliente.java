@@ -2,7 +2,6 @@ package br.edu.ifrs.poa.pessoa;
 
 import br.edu.ifrs.poa.veiculo.VeiculoSegurado;
 
-import java.util.Date;
 import java.util.LinkedList;
 
 /**
@@ -12,7 +11,7 @@ import java.util.LinkedList;
 public class Cliente extends Pessoa{
     private String endereco;
     private String telefone;
-    private LinkedList<VeiculoSegurado> veiculoSegurados = new LinkedList<>();
+    private LinkedList<VeiculoSegurado> veiculosSegurados = new LinkedList<>();
 
     //Constructor
     public Cliente(String nome, String dataNascimento, String endereco, String telefone) {
@@ -39,11 +38,11 @@ public class Cliente extends Pessoa{
     }
 
     public LinkedList<VeiculoSegurado> getVeiculoSegurados() {
-        return veiculoSegurados;
+        return veiculosSegurados;
     }
 
-    public void setVeiculoSegurados(LinkedList<VeiculoSegurado> veiculoSegurados) {
-        this.veiculoSegurados = veiculoSegurados;
+    public void setVeiculosSegurados(LinkedList<VeiculoSegurado> veiculosSegurados) {
+        this.veiculosSegurados = veiculosSegurados;
     }
 
     @Override
@@ -52,7 +51,7 @@ public class Cliente extends Pessoa{
                 "Pessoa: " + super.toString() + '\'' +
                 "endereco='" + endereco + '\'' +
                 ", telefone='" + telefone + '\'' +
-                ", veiculoSegurados=" + veiculoSegurados +
+                ", veiculosSegurados=" + veiculosSegurados +
                 '}';
     }
 }

@@ -18,6 +18,7 @@ public class Usuario extends Pessoa{
     }
 
     public Usuario() {
+
     }
 
     //getters & setters
@@ -36,6 +37,7 @@ public class Usuario extends Pessoa{
     public void setSenha(String senha) {
         this.senha = senha;
     }
+
 
     @Override
     public String toString() {
