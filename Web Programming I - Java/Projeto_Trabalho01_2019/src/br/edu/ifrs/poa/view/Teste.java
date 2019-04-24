@@ -13,13 +13,58 @@ public class Teste {
         int opc = 0;
         Scanner input = new Scanner(System.in);
 
+        Usuario usuario = new Usuario();
+        List<Usuario> usuarios = new ArrayList<Usuario>();
+
+
+
         Menu menu = new Menu();
-        //opc = menu.menuPrincipal();
+        opc = menu.menuPrincipal();
+            switch (opc) {
+                case 1:
+                    JOptionPane.showMessageDialog(null, "Você escolheu Cadastrar um usuário");
+                    opc = menu.menuCadastraUsuario();
+                    break;
+                case 2:
+                    System.out.println("Faz algo: ");
+                    break;
+
+
+            }
+
+
+        while (opc != 0){
+            String nome = JOptionPane.showInputDialog("Qual o seu nome?", "Digite seu nome aqui.");
+            usuario.setNome(nome);
+            //JOptionPane.showMessageDialog(null, "Nome eh: " + usuario.getNome());
+            int ano = Integer.parseInt(JOptionPane.showInputDialog
+                    ("Qual a sua data de nascimento (Ano)", "ANO"));
+            int mes = Integer.parseInt(JOptionPane.showInputDialog
+                    ("Qual a sua data de nascimento (Mês)", "MÊS"));
+            int dia = Integer.parseInt(JOptionPane.showInputDialog
+                    ("Qual a sua data de nascimento (Dia)", "DIA"));
+            LocalDate data = LocalDate.of(ano, mes, dia);
+            usuarios.add(new Usuario(nome, data));
+            opc = Integer.parseInt(JOptionPane.showInputDialog(null, "1 - Cadastrar outro usuário" + "\n" + "0 - Voltar"));
+        }
+
+        for(Usuario u : usuarios){
+            System.out.println("U:" + u);
+        }
+            System.exit(0);
+
+
+
+    }
+}
+           /*
+            opc = menu.menuPrincipal();
+        opc = input.nextInt();
+
+
         JOptionPane.showMessageDialog(null, "Você escolheu Cadastrar um usuário");
         opc = menu.menuCadastraUsuario();
 
-        Usuario usuario = new Usuario();
-        List<Usuario> usuarios = new ArrayList<Usuario>();
         cadastraUsuario cadastraP1 = new cadastraUsuario();
         while (opc != 0){
 
@@ -37,17 +82,20 @@ public class Teste {
             opc = Integer.parseInt(JOptionPane.showInputDialog(null, "1 - Cadastrar outro usuário" + "\n" + "0 - Voltar"));
         }
 
+        if(opc == 0){
+            opc = menu.menuPrincipal();
+        }
+        else if(opc == 7){
+            JOptionPane.showMessageDialog(null,"GREAT job");
+            System.exit(0);
+        }
 
-            cadastraP1.mostraUsuarios();
+        cadastraP1.mostraUsuarios();
             for(Usuario u : usuarios){
                 System.out.println("U:" + u);
             }
 
 
-
-
-        JOptionPane.showMessageDialog(null,"GREAT job");
-        System.exit(0);
 
         //JOptionPane.showMessageDialog(null, "Opcao eh: " + opc);
 
@@ -112,7 +160,5 @@ public class Teste {
 //        double in = Collections.binarySearch(lst, num);
 //        if(in >= 0.0)JOptionPane.showMessageDialog(null, "Existe");
 //        else JOptionPane.showMessageDialog(null, "Numero não existe");
-    }
 
-
-}
+*/
