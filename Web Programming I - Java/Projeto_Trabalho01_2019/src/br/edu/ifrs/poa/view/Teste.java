@@ -5,45 +5,94 @@ import br.edu.ifrs.poa.pessoa.Usuario;
 
 import javax.swing.*;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.time.format.ResolverStyle;
 import java.util.*;
 
 public class Teste {
 
     public static void main(String[] args) {
-        LocalDate data = LocalDate.now();
+        int opc = 0;
+        Scanner input = new Scanner(System.in);
 
-        LocalDate data2 = LocalDate.of(1999, 3, 25);
-        LocalDate data3 = LocalDate.of(2002, 4, 30);
+        Menu menu = new Menu();
+        //opc = menu.menuPrincipal();
+        JOptionPane.showMessageDialog(null, "Você escolheu Cadastrar um usuário");
+        opc = menu.menuCadastraUsuario();
 
+        Usuario usuario = new Usuario();
+        List<Usuario> usuarios = new ArrayList<Usuario>();
+        cadastraUsuario cadastraP1 = new cadastraUsuario();
+        while (opc != 0){
 
-        Usuario p = new Usuario("PEdro", data2);
-        Usuario p2 = new Usuario("Maria", data3);
-
-        Scanner scanner = new Scanner(System.in);
-        int opc=0;
-        cadastraUsuario cadastroUser = new cadastraUsuario();
-
-
-
-        opc = Integer.parseInt(JOptionPane.showInputDialog("Digite 1 para cadastrar usuários ou 0 para sair ! "));
-        while(opc != 0) {
-            JOptionPane.showMessageDialog(null, "Bem vindo ao sistema de cadastros de usuários");
-            JOptionPane.showInputDialog(null, "Digite o nome do usuário");
-            String r = scanner.nextLine();
-            JOptionPane.showMessageDialog(null, "Nome: " + r);
-            JOptionPane.showInputDialog(null, "Digite a data de nasicmento do usuário yyyy, mm, dd");
-            LocalDate data4 = LocalDate.of(scanner.nextInt(), scanner.nextInt(), scanner.nextInt());
-            p.setDataNascimento(data4);
-            cadastroUser.addUsuario(p);
-            JOptionPane.showMessageDialog(null, "Digite 1 para cadastrar outro usuário ou 0 para sair !");
-            opc = scanner.nextInt();
-
+            String nome = JOptionPane.showInputDialog("Qual o seu nome?", "Digite seu nome aqui.");
+            usuario.setNome(nome);
+            //JOptionPane.showMessageDialog(null, "Nome eh: " + usuario.getNome());
+            int ano = Integer.parseInt(JOptionPane.showInputDialog
+                    ("Qual a sua data de nascimento (Ano)", "ANO"));
+            int mes = Integer.parseInt(JOptionPane.showInputDialog
+                    ("Qual a sua data de nascimento (Mês)", "MÊS"));
+            int dia = Integer.parseInt(JOptionPane.showInputDialog
+                    ("Qual a sua data de nascimento (Dia)", "DIA"));
+            LocalDate data = LocalDate.of(ano, mes, dia);
+            usuarios.add(new Usuario(nome, data));
+            opc = Integer.parseInt(JOptionPane.showInputDialog(null, "1 - Cadastrar outro usuário" + "\n" + "0 - Voltar"));
         }
 
-        cadastroUser.mostraUsuarios();
+
+            cadastraP1.mostraUsuarios();
+            for(Usuario u : usuarios){
+                System.out.println("U:" + u);
+            }
+
+
+
+
+        JOptionPane.showMessageDialog(null,"GREAT job");
+        System.exit(0);
+
+        //JOptionPane.showMessageDialog(null, "Opcao eh: " + opc);
+
+
+
+
+
+
+
+
+
+
+
+//        int ano =0;
+//        int mes = 0;
+//        int dia = 0;
+//
+//        LocalDate data = LocalDate.now();
+//
+//        LocalDate data2 = LocalDate.of(1999, 3, 25);
+//        LocalDate data3 = LocalDate.of(2002, 4, 30);
+//
+//
+//        Usuario p = new Usuario("PEdro", data2);
+//        Usuario p2 = new Usuario("Maria", data3);
+//
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Informe data nasc: (ano)");
+//        ano = scanner.nextInt();
+//        System.out.println("Informe data nasc: (mes)");
+//        mes = scanner.nextInt();
+//        System.out.println("Informe data nasc: (dia)");
+//        dia = scanner.nextInt();
+//        System.out.println("Ano: " + ano + ", Mes: " + mes + ", Dia: " + dia);
+//        LocalDate data5 = LocalDate.of(ano, mes, dia);
+//        Usuario p5 = new Usuario("Tuta", data5);
+//        System.out.println("Tuta: " + p5);
+//
+//        cadastraUsuario cadastroUser = new cadastraUsuario();
+//        System.out.println("Informe data nasc: (ano, mes, dia)");
+//        cadastroUser.addDtNasc(scanner.nextInt(),scanner.nextInt(), scanner.nextInt());
+//        System.out.println(cadastroUser.getDtNasc());
+//        cadastroUser.addUsuario(p);
+//        cadastroUser.addUsuario(p2);
+//        cadastroUser.mostraUsuarios();
 //
 //        for (Usuario usuario: usuarios) {
 //            System.out.println("Usuarios cadastrados:" + usuario);
@@ -64,4 +113,6 @@ public class Teste {
 //        if(in >= 0.0)JOptionPane.showMessageDialog(null, "Existe");
 //        else JOptionPane.showMessageDialog(null, "Numero não existe");
     }
+
+
 }

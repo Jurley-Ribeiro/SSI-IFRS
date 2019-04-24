@@ -4,7 +4,7 @@ import javax.swing.*;
 
 public class Menu {
 
-    public int DesenharMenu() {
+    public int menuPrincipal() {
         String desenha = "1 – Cadastrar Usuário\n"
                 + "2 – Cadastrar Veículo Segurado\n"
                 + "3 – Cadastrar Cliente\n"
@@ -17,7 +17,7 @@ public class Menu {
         return escolha; //retorna o menu escolhido
     }
 
-    public int cadastroUsuario(){
+    public int menuCadastraUsuario(){
         String desenha = "1 - Fazer cadastro\n"
                 + "2 - Voltar Menu Principal\n\n"
                 + "Escolha uma opção: ";

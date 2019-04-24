@@ -18,10 +18,10 @@ public class Main {
     }
 
     private void opcao() {
-        switch(layoutMenu.DesenharMenu()){
+        switch(layoutMenu.menuPrincipal()){
             case 1:
                 JOptionPane.showMessageDialog(null,"Escolheu a opção cadastrar usuário");
-                layoutMenu.cadastroUsuario();
+                layoutMenu.menuCadastraUsuario();
                 break;
             case 2:
                 JOptionPane.showMessageDialog(null,"Escolheu menu 2");

@@ -23,6 +23,9 @@ public class Usuario extends Pessoa{
 
     }
 
+    public Usuario() {
+    }
+
     //getters & setters
     public String getIdentificador() {
         return identificador;
@@ -40,6 +43,10 @@ public class Usuario extends Pessoa{
         this.senha = senha;
     }
 
+    public void addDtNasc(int ano, int mes, int dia){
+        LocalDate addData = LocalDate.of(ano, mes, dia);
+        setDataNascimento(addData);
+    }
 
     @Override
     public String toString() {
