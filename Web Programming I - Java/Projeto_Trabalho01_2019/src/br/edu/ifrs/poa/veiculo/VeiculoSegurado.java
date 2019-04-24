@@ -2,8 +2,6 @@ package br.edu.ifrs.poa.veiculo;
 
 import br.edu.ifrs.poa.pessoa.Cliente;
 
-import java.util.Date;
-import java.util.LinkedList;
 
 public class VeiculoSegurado {
     private double kilometragem;
@@ -11,7 +9,7 @@ public class VeiculoSegurado {
     private static int cont = 0;
     private Apolice apolice;
     private Cliente cliente;
-    private LinkedList<Modelo> modelos = new LinkedList<>();
+    private Modelo modelo;
 
     //Constructor
     public VeiculoSegurado(double kilometragem, String placa) {
@@ -20,14 +18,16 @@ public class VeiculoSegurado {
         cont++;
     }
 
-    public VeiculoSegurado(double kilometragem, String placa,
-                           Apolice apolice, Cliente cliente,
-                           LinkedList<Modelo> modelos) {
+    public VeiculoSegurado(double kilometragem, String placa, Apolice apolice, Cliente cliente, Modelo modelo) {
         this.kilometragem = kilometragem;
         this.placa = placa;
         this.apolice = apolice;
         this.cliente = cliente;
-        this.modelos = modelos;
+        this.modelo = modelo;
+        cont++;
+    }
+
+    public VeiculoSegurado() {
     }
 
     //Getter & setters
@@ -47,14 +47,6 @@ public class VeiculoSegurado {
         this.placa = placa;
     }
 
-    public LinkedList<Modelo> getModelos() {
-        return modelos;
-    }
-
-    public void setModelos(LinkedList<Modelo> modelos) {
-        this.modelos = modelos;
-    }
-
     public Apolice getApolice() {
         return apolice;
     }
@@ -63,13 +55,26 @@ public class VeiculoSegurado {
         return cont;
     }
 
+    public Modelo getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(Modelo modelo) {
+        this.modelo = modelo;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
     @Override
     public String toString() {
         return "VeiculoSegurado{" +
                 "kilometragem=" + kilometragem +
                 ", placa='" + placa + '\'' +
                 ", apolice=" + apolice +
-                ", modelos=" + modelos +
+                ", cliente=" + cliente +
+                ", modelo=" + modelo +
                 '}';
     }
 }

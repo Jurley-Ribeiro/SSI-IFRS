@@ -2,6 +2,7 @@ package br.edu.ifrs.poa.pessoa;
 
 import br.edu.ifrs.poa.veiculo.VeiculoSegurado;
 
+import java.time.LocalDate;
 import java.util.LinkedList;
 
 /**
@@ -14,10 +15,17 @@ public class Cliente extends Pessoa{
     private LinkedList<VeiculoSegurado> veiculosSegurados = new LinkedList<>();
 
     //Constructor
-    public Cliente(String nome, String dataNascimento, String endereco, String telefone) {
+
+
+    public Cliente(String nome, LocalDate dataNascimento, String endereco, String telefone, LinkedList<VeiculoSegurado> veiculosSegurados) {
         super(nome, dataNascimento);
         this.endereco = endereco;
         this.telefone = telefone;
+        this.veiculosSegurados = veiculosSegurados;
+    }
+
+    public Cliente(){
+
     }
 
     //Getters & setter

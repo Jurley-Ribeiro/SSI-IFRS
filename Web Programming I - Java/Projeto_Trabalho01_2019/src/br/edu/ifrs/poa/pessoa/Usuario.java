@@ -1,5 +1,6 @@
 package br.edu.ifrs.poa.pessoa;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 /**
@@ -11,13 +12,14 @@ public class Usuario extends Pessoa{
     private String senha;
 
     //Constructor
-    public Usuario(String nome, String dataNascimento, String identificador, String senha) {
+    public Usuario(String nome, LocalDate dataNascimento, String identificador, String senha) {
         super(nome, dataNascimento);
         this.identificador = identificador;
         this.senha = senha;
     }
 
-    public Usuario() {
+    public Usuario(String nome, LocalDate dataNascimento) {
+        super(nome, dataNascimento);
 
     }
 

@@ -1,7 +1,9 @@
 package br.edu.ifrs.poa.pessoa;
 
 import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.ResolverStyle;
 
 /**
  *
@@ -9,10 +11,16 @@ import java.util.Date;
  */
 public abstract class Pessoa {
     private String nome;
-    private String dataNascimento;
+    private LocalDate dataNascimento;
 
-    SimpleDateFormat formatoData = new SimpleDateFormat("dd/MM/YYYY");
+    //constructor
+    public Pessoa(String nome, LocalDate dataNascimento) {
+        this.nome = nome;
+        this.dataNascimento = dataNascimento;
+    }
 
+    public Pessoa() {
+    }
 
     //getters & setters
 
@@ -24,33 +32,28 @@ public abstract class Pessoa {
         this.nome = nome;
     }
 
-    public String getDataNascimento() {
+    public LocalDate getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(String dataNascimento) {
+    public void setDataNascimento(LocalDate dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 
-//    public String getDateFormat(){
-//        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
-//        String dataFormat = formato.format(dataNascimento);
-//        return dataFormat;
-//    }
-    //constructor
-    public Pessoa(String nome, String dataNascimento) {
-        this.nome = nome;
-        this.dataNascimento = dataNascimento;
-    }
-
-    public Pessoa() {
+    public String formataDataNascimento(){
+        DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        formato = formato.withResolverStyle(ResolverStyle.STRICT);
+        String dataFormatada = (dataNascimento.format(formato));
+        return dataFormatada;
     }
 
     @Override
     public String toString() {
-        return "Pessoa{" +
-                "nome='" + nome + '\'' +
-                ", dataNascimento=" + dataNascimento +
+        return " " +
+                "Nome= '" + nome + '\'' +
+                ", Data nascimento= '" + formataDataNascimento() +
+                "'" +
                 '}';
     }
+
 }
