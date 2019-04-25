@@ -27,6 +27,13 @@ public class VeiculoSegurado {
         cont++;
     }
 
+    public VeiculoSegurado(double kilometragem, String placa, Apolice apolice, Modelo modelo) {
+        this.kilometragem = kilometragem;
+        this.placa = placa;
+        this.apolice = apolice;
+        this.modelo = modelo;
+    }
+
     public VeiculoSegurado() {
     }
 
@@ -72,9 +79,9 @@ public class VeiculoSegurado {
         return "VeiculoSegurado{" +
                 "kilometragem=" + kilometragem +
                 ", placa='" + placa + '\'' +
-                ", apolice=" + apolice +
+                ", apolice=" + apolice.toString() +
                 ", cliente=" + cliente +
-                ", modelo=" + modelo +
+                ", modelo=" + modelo.toString() +
                 '}';
     }
 }

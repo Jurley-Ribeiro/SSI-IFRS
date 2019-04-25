@@ -1,7 +1,11 @@
 package br.edu.ifrs.poa.view;
 
+import br.edu.ifrs.poa.pessoa.Cliente;
 import br.edu.ifrs.poa.pessoa.Pessoa;
 import br.edu.ifrs.poa.pessoa.Usuario;
+import br.edu.ifrs.poa.veiculo.Apolice;
+import br.edu.ifrs.poa.veiculo.Modelo;
+import br.edu.ifrs.poa.veiculo.VeiculoSegurado;
 
 import javax.swing.*;
 import java.time.LocalDate;
@@ -11,49 +15,125 @@ public class Teste {
 
     public static void main(String[] args) {
         int opc = 0;
+        int opcCad = 0;
         Scanner input = new Scanner(System.in);
 
         Usuario usuario = new Usuario();
+        VeiculoSegurado veiculoSegurado = new VeiculoSegurado();
         List<Usuario> usuarios = new ArrayList<Usuario>();
+        LinkedList<VeiculoSegurado> veiculosSegurados = new LinkedList<>();
+        List<Cliente> clientes = new ArrayList<>();
+        Cliente cliente = new Cliente();
+        Modelo modelo = new Modelo();
+        Apolice apolice = new Apolice();
+
+//        Menu menu = new Menu();
+//        opc = menu.menuPrincipal();
+//        switch (opc) {
+//            case 1:
+//                JOptionPane.showMessageDialog(null, "Você escolheu Cadastrar um usuário");
+//                opcCad = menu.menuCadastraUsuario();
+//                break;
+//            case 2:
+//                JOptionPane.showMessageDialog(null, "Você escolheu Cadastrar um veículo");
+//                opcCad = menu.menuCadastraUsuario();
+//                break;
+//            case 3:
+//                JOptionPane.showMessageDialog(null, "Você escolheu Cadastrar um Cliente");
+//                opcCad = menu.menuCadastraUsuario();
+//                break;
+//
+//
+//        }
+//
+//
+//        if (opcCad == 1) {
+//
+//
+//            while (opcCad == 1) {
+//                String nome = JOptionPane.showInputDialog("Qual o seu nome?", "Digite seu nome aqui.");
+//                usuario.setNome(nome);
+//                //JOptionPane.showMessageDialog(null, "Nome eh: " + usuario.getNome());
+//                int ano = Integer.parseInt(JOptionPane.showInputDialog
+//                        ("Qual a sua data de nascimento (Ano)", "ANO"));
+//                int mes = Integer.parseInt(JOptionPane.showInputDialog
+//                        ("Qual a sua data de nascimento (Mês)", "MÊS"));
+//                int dia = Integer.parseInt(JOptionPane.showInputDialog
+//                        ("Qual a sua data de nascimento (Dia)", "DIA"));
+//                LocalDate data = LocalDate.of(ano, mes, dia);
+//                usuarios.add(new Usuario(nome, data));
+//                opcCad = Integer.parseInt(JOptionPane.showInputDialog(null, "1 - Cadastrar outro usuário" + "\n" + "0 - Voltar"));
+//            }
+//        } else if (opcCad == 2) {
+//            while (opcCad == 1) {
+//                Double km = Double.valueOf(JOptionPane.showInputDialog("Qual a Kilometragem", "Km."));
+//                veiculoSegurado.setKilometragem(km);
+//
+//                String placa = JOptionPane.showInputDialog("Qual a placa?", "Digite sua placa aqui.");
+//                veiculoSegurado.setPlaca(placa);
+//
+//                String descricao = JOptionPane.showInputDialog("Qual o modelo do Veículo?", "Digite seu modelo aqui.");
+//                modelo.setDescricao(descricao);
+//                veiculoSegurado.setModelo(modelo);
+//
+//                Long numeroApolice = Long.valueOf(JOptionPane.showInputDialog("Qual o número da apolice?", "Nº apolice"));
+//                apolice.setNumero(numeroApolice);
+//                LocalDate dataApolice = LocalDate.now();
+//                apolice.setData(dataApolice);
+//                int anoValidadeApolice = Integer.parseInt(JOptionPane.showInputDialog
+//                        ("Qual a data de validade da apolice (Ano)", "ANO"));
+//                int mesValideApolice = Integer.parseInt(JOptionPane.showInputDialog
+//                        ("Qual a data de validade da apolice (Mês)", "MÊS"));
+//                int diaValidadeApolice = Integer.parseInt(JOptionPane.showInputDialog
+//                        ("Qual a data de validade da apolice (Dia)", "DIA"));
+//                LocalDate dataValidadeApolice = LocalDate.of(anoValidadeApolice, mesValideApolice, diaValidadeApolice);
+//                apolice.setDataValidade(dataValidadeApolice);
+//                String seguradora = JOptionPane.showInputDialog("Informe a seguradora", "Nome seguradora.");
+//                apolice.setSeguradora(seguradora);
+//                veiculosSegurados.add(new VeiculoSegurado(km, placa, apolice, modelo));
+//                opcCad = Integer.parseInt(JOptionPane.showInputDialog(null, "1 - Cadastrar outro Veiculo" + "\n" + "0 - Voltar"));
+//            }
+//
+//
+//        }
+//        else if (opcCad == 3){
+            do{
+                //String nome = JOptionPane.showInputDialog("Qual o seu nome?", "Digite seu nome aqui.");
+                String nome = JOptionPane.showInputDialog(null,
+                                        "Enter your name",
+                                        "Cliente",
+                                        JOptionPane.INFORMATION_MESSAGE);
+                cliente.setNome(nome);
+                JOptionPane.showMessageDialog(null, "Nome eh: " + cliente.getNome());
+                int ano = Integer.parseInt(JOptionPane.showInputDialog
+                        ("Qual a sua data de nascimento (Ano)", "ANO"));
+                int mes = Integer.parseInt(JOptionPane.showInputDialog
+                        ("Qual a sua data de nascimento (Mês)", "MÊS"));
+                int dia = Integer.parseInt(JOptionPane.showInputDialog
+                        ("Qual a sua data de nascimento (Dia)", "DIA"));
+                LocalDate data = LocalDate.of(ano, mes, dia);
+                String endereco = JOptionPane.showInputDialog("Qual o seu endereço?", "Digite seu endereço aqui.");
+                cliente.setEndereco(endereco);
+                String telefone = JOptionPane.showInputDialog("Qual o seu telefone?", "Digite seu telefone aqui.");
+                cliente.setTelefone(telefone);
+                clientes.add(new Cliente(nome, data, endereco, telefone, veiculosSegurados));
+                opcCad = Integer.parseInt(JOptionPane.showInputDialog(null, "1 - Cadastrar outro Cliente" + "\n" + "0 - Voltar"));
+            }while (opcCad != 0);
 
 
 
-        Menu menu = new Menu();
-        opc = menu.menuPrincipal();
-            switch (opc) {
-                case 1:
-                    JOptionPane.showMessageDialog(null, "Você escolheu Cadastrar um usuário");
-                    opc = menu.menuCadastraUsuario();
-                    break;
-                case 2:
-                    System.out.println("Faz algo: ");
-                    break;
-
-
-            }
-
-
-        while (opc != 0){
-            String nome = JOptionPane.showInputDialog("Qual o seu nome?", "Digite seu nome aqui.");
-            usuario.setNome(nome);
-            //JOptionPane.showMessageDialog(null, "Nome eh: " + usuario.getNome());
-            int ano = Integer.parseInt(JOptionPane.showInputDialog
-                    ("Qual a sua data de nascimento (Ano)", "ANO"));
-            int mes = Integer.parseInt(JOptionPane.showInputDialog
-                    ("Qual a sua data de nascimento (Mês)", "MÊS"));
-            int dia = Integer.parseInt(JOptionPane.showInputDialog
-                    ("Qual a sua data de nascimento (Dia)", "DIA"));
-            LocalDate data = LocalDate.of(ano, mes, dia);
-            usuarios.add(new Usuario(nome, data));
-            opc = Integer.parseInt(JOptionPane.showInputDialog(null, "1 - Cadastrar outro usuário" + "\n" + "0 - Voltar"));
+        for (Cliente c : clientes){
+            System.out.println("Cliente: " + c);
         }
+        System.exit(0);
 
-        for(Usuario u : usuarios){
-            System.out.println("U:" + u);
-        }
-            System.exit(0);
-
-
+//        for (VeiculoSegurado veic : veiculosSegurados){
+//            System.out.println("Veiculos: " + veic);
+//        }
+//        for (Usuario u : usuarios) {
+//            System.out.println("U:" + u);
+//        }
+//        System.exit(0);
 
     }
 }

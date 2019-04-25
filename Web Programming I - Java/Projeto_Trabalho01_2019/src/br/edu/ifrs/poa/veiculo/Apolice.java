@@ -23,6 +23,13 @@ public class Apolice {
     public Apolice() {
     }
 
+    public Apolice(long numero, LocalDate data, LocalDate dataValidade, String seguradora) {
+        this.numero = numero;
+        this.data = data;
+        this.dataValidade = dataValidade;
+        this.seguradora = seguradora;
+    }
+
     //Getters & setters
     public long getNumero() {
         return numero;
@@ -62,5 +69,22 @@ public class Apolice {
 
     public void setSeguradora(String seguradora) {
         this.seguradora = seguradora;
+    }
+
+    public void addDtApolice(int ano, int mes, int dia){
+        LocalDate addDataApolice = LocalDate.of(ano, mes, dia);
+        setDataValidade(addDataApolice);
+    }
+
+    @Override
+    public String toString() {
+        return "Apolice{" + + '\n' +
+                "numero=" + numero +
+                ", data=" + data +
+                ", dataValidade=" + dataValidade +
+                ", situacao=" + situacao +
+                ", seguradora='" + seguradora + '\'' +
+                ", situacaoApolice=" + situacaoApolice +
+                '}';
     }
 }

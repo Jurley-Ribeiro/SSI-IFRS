@@ -24,4 +24,5 @@ public class Menu {
         int escolheCadastroUsuario = Integer.parseInt(JOptionPane.showInputDialog(desenha));
         return escolheCadastroUsuario;
     }
+
 }

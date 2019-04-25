@@ -11,4 +11,10 @@ public final class Modelo {
         this.descricao = descricao;
     }
 
+    @Override
+    public String toString() {
+        return "Modelo{" +
+                "descricao='" + descricao + '\'' +
+                '}';
+    }
 }
