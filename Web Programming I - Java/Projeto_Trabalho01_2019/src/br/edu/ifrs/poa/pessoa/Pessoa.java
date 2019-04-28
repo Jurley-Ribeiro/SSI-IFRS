@@ -53,7 +53,7 @@ public abstract class Pessoa {
                 "Nome= '" + nome + '\'' +
                 ", Data nascimento= '" + formataDataNascimento() +
                 "'" +
-                '}';
+                ' ';
     }
 
 }

@@ -25,4 +25,5 @@ public class Menu {
         return escolheCadastroUsuario;
     }
 
+
 }
