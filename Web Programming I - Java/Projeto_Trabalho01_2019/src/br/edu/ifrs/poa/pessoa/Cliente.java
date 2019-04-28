@@ -24,6 +24,13 @@ public class Cliente extends Pessoa{
         this.veiculosSegurados = veiculosSegurados;
     }
 
+    public Cliente(String nome, LocalDate dataNascimento, String endereco, String telefone) {
+        super(nome, dataNascimento);
+        this.endereco = endereco;
+        this.telefone = telefone;
+        this.veiculosSegurados = veiculosSegurados;
+    }
+
     public Cliente(){
 
     }

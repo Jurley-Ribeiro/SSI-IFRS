@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fa99008-dccf-42bb-9332-04764c44a205" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/br/edu/ifrs/poa/view/FuncionaPorra.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/edu/ifrs/poa/view/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Trabalho01_2019/br/edu/ifrs/poa/view/Teste.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projeto_Trabalho01_2019/br/edu/ifrs/poa/view/Teste.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/edu/ifrs/poa/pessoa/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/edu/ifrs/poa/pessoa/Pessoa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/edu/ifrs/poa/pessoa/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/edu/ifrs/poa/pessoa/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/edu/ifrs/poa/view/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/edu/ifrs/poa/view/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/edu/ifrs/poa/pessoa/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/edu/ifrs/poa/pessoa/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/edu/ifrs/poa/view/FuncionaPorra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/edu/ifrs/poa/view/FuncionaPorra.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,8 +29,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/br/edu/ifrs/poa/view/Teste.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="133" column="13" selection-start-line="132" selection-start-column="10" selection-end-line="134" selection-end-column="11" />
+            <state relative-caret-position="456">
+              <caret line="94" selection-start-line="68" selection-end-line="94" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/br/edu/ifrs/poa/pessoa/Cliente.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="29" column="33" lean-forward="true" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -62,40 +69,19 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/br/edu/ifrs/poa/view/cadastraUsuario.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="27" column="62" selection-start-line="26" selection-start-column="8" selection-end-line="27" selection-end-column="66" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/br/edu/ifrs/poa/view/Menu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="18" selection-start-line="6" selection-start-column="4" selection-end-line="17" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/br/edu/ifrs/poa/pessoa/Usuario.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="52" column="35" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/br/edu/ifrs/poa/view/FuncionaPorra.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="151" column="31" selection-start-line="151" selection-start-column="31" selection-end-line="151" selection-end-column="31" />
+            <state relative-caret-position="-828">
+              <caret line="43" column="39" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#menu#0;class#FuncionaPorra#0" />
+                <element signature="method#cadastrarUsuario#0;class#FuncionaPorra#0" />
+                <element signature="method#cadastrarCliente#0;class#FuncionaPorra#0" />
+                <element signature="method#listarUsuariosCadastrados#0;class#FuncionaPorra#0" />
+                <element signature="method#listarUsuariosCadastrados#0;class#FuncionaPorra#0" />
+                <element signature="method#listarUsuariosCadastrados#1;class#FuncionaPorra#0" />
               </folding>
             </state>
           </provider>
@@ -127,15 +113,15 @@
         <option value="$PROJECT_DIR$/src/br/edu/ifrs/poa/veiculo/Modelo.java" />
         <option value="$PROJECT_DIR$/src/br/edu/ifrs/poa/veiculo/VeiculoSegurado.java" />
         <option value="$PROJECT_DIR$/src/br/edu/ifrs/poa/veiculo/Apolice.java" />
-        <option value="$PROJECT_DIR$/src/br/edu/ifrs/poa/pessoa/Cliente.java" />
         <option value="$PROJECT_DIR$/src/br/edu/ifrs/poa/view/Menu.java" />
         <option value="$PROJECT_DIR$/src/br/edu/ifrs/poa/view/testaCadastro.java" />
-        <option value="$PROJECT_DIR$/src/br/edu/ifrs/poa/view/Teste.java" />
         <option value="$PROJECT_DIR$/src/br/edu/ifrs/poa/view/descubra.java" />
         <option value="$PROJECT_DIR$/src/br/edu/ifrs/poa/view/View.java" />
         <option value="$PROJECT_DIR$/src/br/edu/ifrs/poa/pessoa/Pessoa.java" />
-        <option value="$PROJECT_DIR$/src/br/edu/ifrs/poa/view/FuncionaPorra.java" />
         <option value="$PROJECT_DIR$/src/br/edu/ifrs/poa/pessoa/Usuario.java" />
+        <option value="$PROJECT_DIR$/src/br/edu/ifrs/poa/pessoa/Cliente.java" />
+        <option value="$PROJECT_DIR$/src/br/edu/ifrs/poa/view/Teste.java" />
+        <option value="$PROJECT_DIR$/src/br/edu/ifrs/poa/view/FuncionaPorra.java" />
       </list>
     </option>
   </component>
@@ -387,16 +373,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/edu/ifrs/poa/pessoa/Cliente.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/br/edu/ifrs/poa/view/testaCadastro.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="265">
@@ -417,13 +393,6 @@
     <entry file="file://$PROJECT_DIR$/src/br/edu/ifrs/poa/view/descubra.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/edu/ifrs/poa/view/cadastraUsuario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="27" column="62" selection-start-line="26" selection-start-column="8" selection-end-line="27" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/br/edu/ifrs/poa/view/Menu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -431,10 +400,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/edu/ifrs/poa/view/Teste.java">
+    <entry file="file://$PROJECT_DIR$/src/br/edu/ifrs/poa/pessoa/Usuario.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="133" column="13" selection-start-line="132" selection-start-column="10" selection-end-line="134" selection-end-column="11" />
+        <state relative-caret-position="357">
+          <caret line="54" column="16" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/edu/ifrs/poa/view/cadastraUsuario.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="27" column="62" selection-start-line="26" selection-start-column="8" selection-end-line="27" selection-end-column="66" />
         </state>
       </provider>
     </entry>
@@ -442,6 +418,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
           <caret line="55" column="16" lean-forward="true" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/edu/ifrs/poa/pessoa/Cliente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="29" column="33" lean-forward="true" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -456,20 +442,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/edu/ifrs/poa/view/FuncionaPorra.java">
+    <entry file="file://$PROJECT_DIR$/src/br/edu/ifrs/poa/view/Teste.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="151" column="31" selection-start-line="151" selection-start-column="31" selection-end-line="151" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="456">
+          <caret line="94" selection-start-line="68" selection-end-line="94" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/edu/ifrs/poa/pessoa/Usuario.java">
+    <entry file="file://$PROJECT_DIR$/src/br/edu/ifrs/poa/view/FuncionaPorra.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="52" column="35" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
+        <state relative-caret-position="-828">
+          <caret line="43" column="39" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#menu#0;class#FuncionaPorra#0" />
+            <element signature="method#cadastrarUsuario#0;class#FuncionaPorra#0" />
+            <element signature="method#cadastrarCliente#0;class#FuncionaPorra#0" />
+            <element signature="method#listarUsuariosCadastrados#0;class#FuncionaPorra#0" />
+            <element signature="method#listarUsuariosCadastrados#0;class#FuncionaPorra#0" />
+            <element signature="method#listarUsuariosCadastrados#1;class#FuncionaPorra#0" />
+          </folding>
         </state>
       </provider>
     </entry>
